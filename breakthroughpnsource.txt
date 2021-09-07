@@ -1,0 +1,90 @@
++-----------------+
+|       Card      |
+|-----------------|
+| _CardNumber     |
+| _NextCardNumber |
+| _Score          |
+|-----------------|
+| GetCardNumber   |
+| GetDescription  |
+| GetScore        |
+| Process         |
+| __init__        |
++-----------------+
+       .                                   
+      /_\                                  
+       |                     [ Card ]      
+       |                        .          
+       |                       /_\         
+       |                        |          
+       |                        |          
++----------------+       +----------------+
+| DifficultyCard |       |    ToolCard    |
+|----------------|       |----------------|
+| _CardNumber    |       | _CardNumber    |
+| _CardType      |       | _Kit           |
+|----------------|       | _Score         |
+| GetDescription |       | _ToolType      |
+| Process        |       |----------------|
+| __init__       |       | GetDescription |
++----------------+       | __SetScore     |
+                         | __init__       |
+                         +----------------+
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            
++-----------------------------------+                                  +--------------+       +----------------------------+
+|            Breakthrough           |                                  |  Challenge   |       |            Lock            |
+|-----------------------------------|                                  |--------------|       |----------------------------|
+| __CurrentLock                     |  ---->  [ CardCollection ]       | _Condition   |       | _Challenges                |
+| __Deck                            |  ---->  [ Lock ]                 | _Met         |       |----------------------------|
+| __Discard                         |                                  |--------------|       | AddChallenge               |
+| __GameOver                        |                                  | GetCondition |       | CheckIfConditionMet        |
+| __Hand                            |                                  | GetMet       |       | GetChallengeMet            |
+| __LockSolved                      |                                  | SetCondition |       | GetLockDetails             |
+| __Locks                           |                                  | SetMet       |       | GetLockSolved              |
+| __Score                           |                                  | __init__     |       | GetNumberOfChallenges      |
+| __Sequence                        |                                  +--------------+       | SetChallengeMet            |
+|-----------------------------------|                                                         | __ConvertConditionToString |
+| PlayGame                          |                                                         | __init__                   |
+| __AddDifficultyCardsToDeck        |                                                         +----------------------------+
+| __CheckIfLockChallengeMet         |                                                                                       
+| __CheckIfPlayerHasLost            |                                                                                       
+| __CreateStandardDeck              |                                                                                       
+| __GetCardChoice                   |                                                                                       
+| __GetCardFromDeck                 |                                                                                       
+| __GetChoice                       |                                                                                       
+| __GetDiscardOrPlayChoice          |                                                                                       
+| __GetRandomLock                   |                                                                                       
+| __LoadGame                        |                                                                                       
+| __LoadLocks                       |                                                                                       
+| __MoveCard                        |                                                                                       
+| __PlayCardToSequence              |                                                                                       
+| __ProcessLockSolved               |                                                                                       
+| __SetupCardCollectionFromGameFile |                                                                                       
+| __SetupGame                       |                                                                                       
+| __SetupLock                       |                                                                                       
+| __init__                          |                                                                                       
++-----------------------------------+                                                                                       
+                        
+                        
+                        
+                        
++----------------------+
+|    CardCollection    |
+|----------------------|
+| _Cards               |
+| _Name                |
+|----------------------|
+| AddCard              |
+| GetCardDescriptionAt |
+| GetCardDisplay       |
+| GetCardNumberAt      |
+| GetName              |
+| GetNumberOfCards     |
+| RemoveCard           |
+| Shuffle              |
+| __CreateLineOfDashes |
+| __init__             |
++----------------------+
